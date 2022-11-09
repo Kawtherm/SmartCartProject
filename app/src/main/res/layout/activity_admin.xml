@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right_top_bar_b" />
+
+    <Button
+        android:id="@+id/admin_back_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@color/sl_teal"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="Back"
+        android:fontFamily="@font/droidkufi_bold"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="46dp"/>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/admin_settings_btn"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:background="@color/sl_teal"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Settings"
+            android:fontFamily="@font/droidkufi_bold"/>
+
+        <Button
+            android:id="@+id/admin_scale_btn"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:background="@color/sl_teal"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Scale"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/droidkufi_bold"/>
+
+
+
+        <Button
+            android:id="@+id/admin_diagnostics_btn"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Diagnostics"
+            android:enabled="false"
+            android:layout_below="@+id/admin_settings_btn"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/droidkufi_bold"/>
+
+        <Button
+            android:id="@+id/admin_reset_orders_btn"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:background="@color/sl_teal"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Reset Orders"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/admin_scale_btn"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/droidkufi_bold"/>
+
+
+
+
+        
+    </RelativeLayout>
+    
+
+</RelativeLayout>

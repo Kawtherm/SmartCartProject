@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ResetActivity">
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right_top_bar_b" />
+
+    <Button
+        android:id="@+id/orders_back_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="46dp"
+        android:background="@color/sl_teal"
+        android:fontFamily="@font/droidkufi_bold"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/print_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="46dp"
+        android:background="@color/sl_teal"
+        android:fontFamily="@font/droidkufi_bold"
+        android:text="Print"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="138dp"
+        android:orientation="horizontal">
+
+        <WebView
+            android:id="@+id/orders_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Material.ProgressBar.Large"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

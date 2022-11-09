@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InvoiceActivity"
+    android:background="@android:color/white">
+    
+    
+    <ImageView
+        android:id="@+id/iv_logo_eight"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="53dp"
+        android:src="@drawable/logo_bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="50dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="200dp">
+        <TextView
+            android:id="@+id/pageeight_thank_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thank_you"
+            android:textSize="70sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/sl_teal"
+            android:fontFamily="@font/droidkufi_regular"/>
+
+        <TextView
+            android:id="@+id/pageeight_forshop_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/for_shopping"
+            android:textSize="50sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/sl_teal"
+            android:fontFamily="@font/droidkufi_regular"
+            android:layout_below="@+id/pageeight_thank_lbl"/>
+
+        <TextView
+            android:id="@+id/pageeight_rate_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rate"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/sl_teal"
+            android:fontFamily="@font/droidkufi_regular"
+            android:layout_below="@+id/pageeight_forshop_lbl"
+            android:layout_marginTop="80dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/faces"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/pageeight_rate_lbl"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/rating_btn_01"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_smile"
+                android:scaleType="fitCenter"
+                app:tint="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_alignParentStart="true"/>
+
+            <ImageButton
+                android:id="@+id/rating_btn_02"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_neutral"
+                android:scaleType="fitCenter"
+                app:tint="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:id="@+id/rating_btn_03"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_sad"
+                android:scaleType="fitCenter"
+                app:tint="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="440dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/rect_black_dashed_border">
+
+        <TextView
+            android:id="@+id/invoice_nb_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/droidkufi_bold"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="80dp"
+            android:layerType="software"
+            android:src="@drawable/dashed_line_black" />
+
+        <ImageView
+            android:id="@+id/invoice_qr_code_img"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp" />
+
+        <TextView
+            android:id="@+id/scan_qr_inst_lbl"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/droidkufi_bold"
+            android:lines="5"
+            android:text="@string/scan_code"
+            android:textColor="@color/sl_blue"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/print_invoice"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_rounded_corners"
+            android:fontFamily="@font/droidkufi_bold"
+            android:text="Print Invoice"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/pageeight_receipt_nb_lbl"
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="550dp"
+        android:layout_marginTop="660dp"
+        android:fontFamily="@font/droidkufi_regular"
+        android:text="@string/invoice_no"
+        android:textColor="@android:color/black"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/finish_shopping_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@color/sl_blue"
+        android:textColor="@color/white"
+        android:fontFamily="@font/droidkufi_regular"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="أنهاء"/>
+
+    <Button
+        android:id="@+id/bill_back_home"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/btn_rounded_corners"
+        android:fontFamily="@font/droidkufi_bold"
+        android:text="الصفحة الرئيسية"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,279 @@
+In release number 1.2.12, the following changes were made:
+- Updated EEMC placing order body.
+- Modified prefix checks and getting prefix tolerance.
+
+In release number 1.2.11, the following changes were made:
+- Appended original barcode with every product verification and used it to check for prefix.
+- Removed dependency on isPrefix property and only used originalBarcode to check if product is prefix.
+- Changed the check for prefix to use startWith since the type is not always first two digits.
+
+In release number 1.2.10, the following changes were made:
+- Added a flag to check if vegetable's price is in Fils or Dinars using DinarToFilsForVegetablesWeightEvaluation config.
+
+In release number 1.2.9, the following changes were made:
+- Renamed MembershipActivity to CustomerInfoActivity.
+- Added a new field in CustomerInfoActivity to capture customer's email address if email configuration is enabled.
+- Added remote config in Firebase to control "optional" labels visibility in CustomerInfoActivity.
+
+In release number 1.2.8, the following changes were made:
+- Added isWeightedProduct flag when verifying product for integration to support Bayan's removal of prefix the from barcode.
+
+In release number 1.2.7, the following changes were made:
+- Changed how prefix products are verified. The extracted barcode can either include or exclude the prefixed digits.
+
+In release number 1.2.6, the following changes were made:
+- Updated dependencies.
+- Displayed two lights when user clicks checkout and he's in Trolley.
+
+In release number 1.2.5, the following changes were made:
+- Fixed bugs reported by crashlytics.
+- Added null checks for "handleError", "onScannerReadData", and "onScaleReadData".
+- Added "hardwareAccelerated = false" and "largeHeap = true" in manifest to fix a crash report.
+- Payment selection now has a possibility of not having a method to pay. Instead, the customer is directed to the cashier.
+
+In release number 1.2.4, the following changes were made:
+- Wrapped doError and doSuccess with try-catch.
+- Created application class and instantiated the volley queue there to have a singleton object.
+- When getting status code 404 for verifying product, the error message will be "item not found".
+
+In release number 1.2.3, the following changes were made:
+- Implemented HttpsTrustManager to nuke all HTTPS requests.
+
+In release number 1.2.2, the following changes were made:
+- Changed Visa payment button image to another image and added border to it.
+- Upgraded dependencies.
+- Sent a request to generate user when user clicks on continue in page four.
+Then added its ID to ADD_ORDER request in page five.
+- Modified the logic for checking a prefix. Instead of checking first 4 digits, it's now first two.
+- Hooked to Firebase.
+- Renamed activities to proper names that represent each one correctly.
+- Removed unused resources.
+- Added error logging to the server.
+
+In release number 1.2.1, the following changes were made:
+- Added "invoiceDate" for placing order in integration.
+- Changed the payment process by showing a QR code that will direct the user to the payment page in his phone.
+- Added a 5 second interval that will check payment status to detect when the payment is done and successful.
+
+In release number 1.2.0, the following changes were made:
+- Retrieved "hasCreditCardPayment" from company details in activity 3.
+- Added image button in activity 6 for visa payment. Its visibility depends on "hasCreditCardPayment".
+- Modified activity 7 to support visa payment too. Depending on the button clicked in activity 6, the url for the WebView will change.
+
+In release number 1.1.3, the following changes were made:
+- Hid the diagnostic views.
+
+In release number 1.1.2, the following changes were made:
+- Added new keys in SharedPreferencesKeys to reference prefix tolerances.
+- In retrieving company details, extracted prefixes tolerances and if it's null, default to zero.
+- Completely changed cart weight validation. Removed "weight" property from Product and added an array list of "weights" instead.
+- Added text views for diagnostics in weight validation.
+- Now when product is prefix, its server weight is obtained from its kilo price and actual price.
+- Added weight validation for prefix products against their percentage tolerance.
+- For now, fruits prefix is excluded from weight validation and is always considered valid.
+- Prefix products that don't have kilo price are treated like weightless products. Their server weight is zero,
+hence they're excluded from weight validation and are always considered valid.
+
+In release number 1.1.1, the following changes were made:
+- Allowed adding multiple prefixed products with the same barcode, but each will be added as a separate item.
+- Added print button in reset page but made it hidden for now.
+
+In release number 1.1.0, the following changes were made:
+- Upgraded gradle dependencies.
+- Separated app providers in a different class.
+- Modified the settings page to show an extra radio button for our integration.
+- Added a switch case for "integration" option in ApiUrl in VERIFY_MEMBERSHIP, VERIFY_PRODUCT, and PLACE_ORDER.
+- Added a method in class Order to retrieve the products list in the "integration" data structure.
+- Added an inner class in Product to return the product as "integration" data structure.
+- Handled the option "integration" in getting shareholder details in activity 4.
+- Handled the option "integration" in getting product details in activity 5.
+- Handled the option "integration" in placing order in activity 8.
+- Populated extra fields in order object with the response result returned from checking payment status in activity 7.
+
+In release number 1.0.13, the following changes were made:
+- Changed the hardcoded password for settings to Amjad's phone number.
+
+In release number 1.0.12, the following changes were made:
+- Added missing params to posting order in EEMC.
+- Fixed the shareholder's missing params.
+
+In release number 1.0.11, the following changes were made:
+- Updated dependencies.
+- Fixed rebasing scale on language select.
+- Modified placing order params to fit EEMC requirements.
+- Retrieved shareholder ID in page 4.
+- Retrieved customer cart number in settings page.
+- Retrieved invoice number, clear record id, shift number, and invoice date in page 7 when checking payment status.
+
+In release number 1.0.10, the following changes were made:
+- Fixed a bug that was sending customer phone number instead of shareholder number.
+- Reset scale when customer selects a language.
+- Fixed a bug in calculating weight tolerance when the item has a count more than one.
+
+In release number 1.0.9, the following changes were made:
+- Removed all the debugging texts from activity 5 and 8.
+- Passed cart number, invoice date and user id to EEMC's place order request.
+
+In release number 1.0.8, the following changes were made:
+- Changed all post bodies to be JSONObject instead of HashMap.
+- Mapped array of invoice details to different object structure when EEMC is selected.
+
+In release number 1.0.7, the following changes were made:
+- Modified the EEMC request body for placing order.
+
+In release number 1.0.6, the following changes were made:
+- Fixed a bug in validating weight when the first product in cart is weightless/prefix.
+- Enhanced cart weight validation.
+- Scanning while error is displayed will ignore the scan. You can only scan the same new item and its count will increase.
+- Hardcoded the ad URLs in activity 2 and 5.
+
+In release number 1.0.5, the following changes were made:
+- Changed the params sent to generate QR code from "nb" to "orderid".
+- Retrieved customer current balance if valid and registered. Passed this new information to SmartLife add order.
+- Placing order in activity 8 is now split according to the selected inventory URL.
+- Added "Cancel Order" in payment page (activity 7) which will cancel the order and return the user to activity 2.
+- Localized back button found in activity six according to the language picked by the customer.
+- Changed the flags used to start activity 2. These new flags will ensure that app's activity stack is cleared (no back stack).
+- Removed last part in weight validation that involved "mLastRecord". It started ruining my validation and I didn't know what it does.
+- New scans will be ignored when there are items with zero weight in the cart and the scanned item is new to the cart.
+- Messages that are shown to the user are now more specific to the type of weight violation.
+
+In release number 1.0.4, the following changes were made:
+- Reverted back to old logic when verifying cart weight.
+- Excluded weightless/prefixed items from productsCount and modelWeight.
+- Changed the data type for "difference" and "aveDifference" from int to double.
+- Changed cart weight verification. Now, I check against each item's tolerance and add these valid weight differences to the cart weight,
+then these numbers go through Bilal's piece of code validation.
+
+In release number 1.0.3, the following changes were made:
+- Added extra three prefixes (prefix4, prefix5, prefix6).
+- Removed check for having prefixes. Now, nulls are accepted.
+- Fixed a bug in adding order to SmartLife. Previously, the base URL was for inventory but now it's SmartLife's.
+- Improved response handling in Settings activity.
+- Added error TextView for debugging purposes.
+- Applied new logic for verifying cart weight.
+
+In release number 1.0.2, the following changes were made:
+- Further code cleaning and releasing activities plus resources once the job is done to minimize crashes and memory leaks.
+- Added diagnostic panel to facilitate problem detection.
+- Made ad WebView in activity 5 invisible for testing purposes.
+- Removed all the toasts and replaced them with error dialog (doError).
+- Wrapped every callback (from API or hardware) with runOnUiThread.
+- In Settings activity, removed cart registration. Instead of that, I called battery to check if cart is registered and has company ID or not.
+
+In release number 1.0.1, the following changes were made:
+- Created new signing key for app build.
+- Cleaned code and removed unused/commented code.
+- Added comments to help explain the purpose of each activity/service.
+- Changed all activities and made them inherit from Base activity.
+- Removed hardcoded values that represent shared preferences keys or activity extra keys, and added them as enums for easier maintenance.
+- Extracted all the hardcoded constants and created AppConsts class for them.
+- Converted all the hardcoded size values that were used programmatically from DP to Pixel.
+- Password texts are made discreet/secret now.
+- Changed data types of "Order" class properties.
+- Added two hacks to all WebViews to accept any SSL certificate, even if it failed. And to allow mixed content (https -> http).
+- Improved system UI hiding (navigation bar and status bar).
+- Changed all the hardcoded coop logos and used the logo URL retrieved from the server.
+- Implemented weight validation starting from payment page, all the way to final page. if user adds extra weight to the cart, red led will display.
+- Handled EEMC's failed requests.
+- In API URL builder:
+    * Merged ApiMethods with ApiUrl.
+    * Added new operations for updating weight, retrieving tolerance, checking payment status, retrieving company details, and logging errors.
+    * Fixed placing order base URL to take the inventory URL instead of SmartLife.
+- In Scheduled service:
+    * Implemented a receiver to receive battery consumption updates and feed the server with correct values.
+    Previously, this was not the case and the battery level was always passed the same number when app first started.
+    * Implemented service cleanup to clean the timer thread and broadcast.
+- In Base activity:
+    * Added a method that checks whether user chose english or arabic language.
+    * Added a method that converts DP to Pixels.
+    * Created two separate methods for making HTTP requests "makeHttpPostRequest" and "makeHttpGetRequest".
+    * Added an overloading method for "makeHttpGetRequest" which takes the param and embeds it in the URL (for EEMC API calls).
+    * Added "handleError" method which is called when the HTTP request fails.
+    * Extracted common methods between activities and added them in Base activity.
+- In Startup activity:
+    * Added finish() command to end the activity. So when the user manages to press back, it will not take him to splashscreen.
+- In Admin activity:
+    * Implemented View.OnClickLister to better organize the code and remove redundant logic.
+    * Disabled the diagnostics button and colored it grey.
+- In Settings activity:
+    * Added an extra field to store CMS URL.
+    * Added a saving indicator.
+    * Made the system setting panel scrollable.
+    * Company ID was hardcoded. I fixed it and used the actually company id given by the api, or default to 5.
+    * Removed the toast that says "Saved" because it was being called regardless whether cart registration were successful or not.
+    * Overrode the methods "handleResponse" and "handleError" to show message saying whether cart registration is successful or not.
+- In Scale activity:
+    * Overrode "handleError" to show the error to the user.
+    * Overrode "onDestroy" to clear up hardware dependencies by turning scanner off and closing ports.
+    * Cleared error text when the reset button is clicked or when a barcode is scanned.
+    * Removed lines in "handleResponse" and reset button click that will call command '7A' to the scale port.
+    This is because it was causing an issue when reset is pressed and the scale is not empty. The base for the scale would go in negative.
+    * Added a dedicated button called "Rebase Scale" to reset/rebase the empty scale back to zero if needed.
+    This is by calling the commented lines (command '7A').
+- In Reset orders activity:
+    * Removed all the UI views and only kept the WebView.
+    * Implemented the WebView so that it loads the URL saved in settings.
+    * Added a loading spinner to give indication that the page is being loaded.
+    * Cleared cache and cookies when activity is loaded and on activity destroy.
+- In Page 2:
+    * Removed hardcoded URL value and replaced it with the URL provided in settings.
+- In Page 3:
+    * Implemented a receiver to receive battery consumption updates and update battery image accordingly.
+    This was not the case before. The battery image used to show same image when the page was opened,
+    even after some time being passed on that screen and the battery has gone lower.
+    * Modified button drawable to color with grey if the button is disabled.
+    * Implemented View.OnClickLister to better organize the code and remove redundant logic.
+    * Implemented fetching company details and tolerances to store them in shared preferences.
+    This will happen when user chooses a language. If one of these prefixes are missing, the app will not proceed to the next page.
+    * Added a loading spinner to give indication that there is still a pending request.
+    * Added app version below SmartLife logo.
+- In Page 4:
+    * Implemented View.OnClickLister to better organize the code and remove redundant logic.
+    * Fixed an issue with the UI, where text "(Optional)" was misplaced.
+    * Added another text "(Optional)" to show below phone number.
+    * Fixed a crash that happens if the user used the numbers pad before selecting any text field.
+    * Previously, there was no way to go from this screen to the next if user entered membership number.
+    Now an HTTP request is made to validate the number. if it's valid then the user will be directed to next page,
+    otherwise a message will be displayed informing him the number is invalid.
+    * A loading indicator is displayed when membership number is being validated.
+    * The membership number was hardcoded. I fixed it and now it respects what the user enters.
+    * Fixed the HTTP request for validating the shareholder. Now it added the membership number as part of the URL (shareholder/{number}).
+    This was not the case before. The membership number was being passed in the body of the request.
+    * Passed user phone number and membership number to the next activity as extras.
+- In Page 5:
+    * Implemented View.OnClickLister to better organize the code and remove redundant logic.
+    * Fixed the logic of turning on and off the hardware according to activity's lifecycle.
+    * Fixed a possible racing condition when verifying barcode's weight and waiting for its response.
+    Rather than updating product index 0, I find the product that matches the result's barcode, then update its weight.
+    * Added prefix check when product's barcode is being scanned rather than manually inserted.
+    Previously, this was only handled when the user manually enters the barcode, and not when he uses the scanner.
+    * Fixed a bug that would turn off the scanner when the app is put in the background then brought back to foreground.
+    Now, when coming back to foreground, the app will switch the scanner back on.
+    * Implemented logic to update each product's weight individually.
+    * Changed the total cart weight check by excluding products with no server weights and that are not prefixed products.
+    * Added the order to SmartLife before going to payment page.
+    * Removed hardcoded URL value for Ads and replaced it with the URL provided in settings.
+    * Fixed a bug that enabled the payment button when increment/decrement is clicked. Now, it remains disabled if error notification is displayed.
+    * Handled weightless products.
+    * Handled prefixed products.
+    * Modified the algorithm regarding weight validation. Now, I check against tolerance values returned from server.
+- In Page 6:
+    * Uncommented the part where it takes user to KNet payment screen (page 7), rather than the final bill screen (page 8).
+- In Page 7:
+    * Changed the base URL from hardcoded one to the one saved in settings and removed the hardcoded params to use the actual values.
+    * Implemented logic to check for payment status when page is in "Result".
+    If payment is done successfully, I move on to page 8, otherwise, reload button will appear.
+    * Added a reload button to reload the WebView if page failed to load or payment was unsuccessful or payment status request failed.
+    * Added a loading spinner to give indication that the KNet page is being loaded.
+- In Page 8:
+    * Added membership ID, if exists, to the body of placing an order to coop.
+    * Removed "finish" button.
+    * Added padding to the invoice number so it can be prefixed with zeros of length 5.
+    * Changed rating faces to vector typed images.
+    * Clicking at a rating will only color the selected one. It used to take the user back to ads screen and end the purchase process.
+    * Turned on light whether placing order request is successful or not.
+    * Overrode "onDestroy" to clean up hardware dependencies by switching both light and scanner off.
+    * Purchase process is considered done when the weight on the scale is less than 5 grams.
+    This is the only way to move from this screen back to ads screen (page 2).
+    * Changed the barcode URL from using a hardcoded one to the one stored in settings.

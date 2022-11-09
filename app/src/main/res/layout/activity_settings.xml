@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right_top_bar_b" />
+
+    <Button
+        android:id="@+id/settings_back_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@color/sl_teal"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="Back"
+        android:fontFamily="@font/droidkufi_bold"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="46dp"/>
+
+    <Button
+        android:id="@+id/settings_save_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@color/sl_teal"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="@string/settings_save"
+        android:fontFamily="@font/droidkufi_bold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="46dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:text="@string/system_settings"
+        android:textColor="@color/sl_teal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/droidkufi_bold"
+        android:layout_below="@+id/settings_back_btn"
+        android:layout_marginTop="46dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="660dp"
+        android:text="@string/coop_settings"
+        android:textColor="@color/sl_teal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/droidkufi_bold"
+        android:layout_below="@+id/settings_back_btn"
+        android:layout_marginTop="46dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="138dp"
+        android:layout_marginEnd="46dp">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingVertical="8dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rect_white_border_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/smartlife_api_url"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/settings_smartlife_api_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginEnd="46dp"
+                        android:textSize="22sp"
+                        android:paddingStart="10dp"
+
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textUri"
+                        android:background="@drawable/rect_white_border_blue"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/smartlife_ads_url"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/settings_smartlife_ads_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginEnd="46dp"
+                        android:textSize="22sp"
+                        android:paddingStart="10dp"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textUri"
+                        android:background="@drawable/rect_white_border_blue"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/smartlife_cms_url"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/settings_smartlife_cms_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginEnd="46dp"
+                        android:textSize="22sp"
+                        android:paddingStart="10dp"
+
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textUri"
+                        android:background="@drawable/rect_white_border_blue"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/settings_cart_nb"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/settings_cart_nb"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginEnd="46dp"
+                        android:textSize="22sp"
+                        android:paddingStart="10dp"
+
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:background="@drawable/rect_white_border_blue"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/mac_address"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/settings_macaddress"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="46dp"
+                        android:layout_marginEnd="46dp"
+                        android:textSize="22sp"
+                        android:paddingStart="10dp"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:background="@drawable/rect_white_border_blue"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rect_white_border_blue"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!-- Inventroy Api Url -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/inventory_api_url"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/settings_inventory_api_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="46dp"
+                    android:textSize="22sp"
+                    android:paddingStart="10dp"
+
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:inputType="textUri"
+                    android:background="@drawable/rect_white_border_blue"/>
+
+            </LinearLayout>
+            <!-- Store Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Store number:"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/settings_store_number"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="46dp"
+                    android:textSize="22sp"
+                    android:paddingStart="10dp"
+
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:background="@drawable/rect_white_border_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/inventory_name"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/inventories_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="46dp">
+                        <RadioButton
+                            android:id="@+id/inventory_smartlife_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/smartlife"
+                            android:checked="true"
+                            android:textColor="@color/sl_teal"/>
+
+                        <RadioButton
+                            android:id="@+id/inventory_eemc_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/eemc"
+                            android:textColor="@color/sl_teal"/>
+
+                        <RadioButton
+                            android:id="@+id/inventory_integration_rbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/integration"
+                            android:textColor="@color/sl_teal"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

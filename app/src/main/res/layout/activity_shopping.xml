@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ShoppingActivity">
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/pagefive_ad_frame"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+
+        <WebView
+            android:id="@+id/pagefive_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_cart_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_products_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_products_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_products_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/pagefive_separator"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/pagefive_ad_frame"
+        android:background="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/status_notification_bar_holder"
+        android:layout_width="768dp"
+        android:layout_height="0.5dp"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:id="@+id/status_notification_bar"
+            android:layout_width="500dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rect_white_border_red">
+
+            <ImageView
+                android:id="@+id/notification_warning_icon"
+                android:layout_width="42dp"
+                android:layout_height="38dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/warning_icon" />
+
+            <TextView
+                android:id="@+id/status_notification_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/notification_warning_icon"
+                android:fontFamily="@font/droidkufi_regular"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status_notification_bar_holder"
+        android:layout_toEndOf="@+id/pagefive_separator">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/pagefive_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/header_item_lbl"
+                    android:layout_width="400dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/header_item"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sl_red"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/header_price_lbl"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/header_price"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sl_red"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_qty_lbl"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/header_qty"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sl_red"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/header_subtotal_lbl"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/header_subtotal"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/sl_red"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/items_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/pagefive_header"
+                android:layout_alignBottom="@id/pagefive_footer"
+                android:layout_marginBottom="150dp" />
+
+            <RelativeLayout
+                android:id="@+id/pagefive_footer"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/pagefive_comp_logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:id="@+id/pagefive_exit_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/pagefive_comp_logo"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/exit"
+                    android:textColor="@color/sl_teal"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/pagefive_exit_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/pagefive_exit_lbl"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toEndOf="@id/pagefive_comp_logo"
+                    android:src="@drawable/refresh_btn" />
+
+
+                <TextView
+                    android:id="@+id/pagefive_barcode_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/pagefive_exit_lbl"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/barcode_input"
+                    android:textAlignment="center"
+                    android:textColor="@color/sl_teal"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/pagefive_barcode_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="49dp"
+                    android:layout_below="@+id/pagefive_barcode_lbl"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toEndOf="@id/pagefive_exit_btn"
+                    android:src="@drawable/barcode" />
+
+                <Button
+                    android:id="@+id/pagefive_pay_btn"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/sl_green"
+                    android:fontFamily="@font/droidkufi_bold"
+                    android:stateListAnimator="@null"
+                    android:text="@string/pay_now"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
+
+                <FrameLayout
+                    android:id="@+id/pagefive_footer_sep"
+                    android:layout_width="3dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/pagefive_barcode_lbl"
+                    android:background="@android:color/black" />
+
+
+
+                <TextView
+                    android:id="@+id/pagefive_total_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/pagefive_footer_sep"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:text="@string/total"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/pagefive_total_val"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pagefive_total_lbl"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/pagefive_footer_sep"
+                    android:fontFamily="@font/droidkufi_regular"
+                    android:textAlignment="center"
+                    android:textColor="@color/sl_red"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/scanned_barcode"
+                    android:visibility="invisible"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:focusable="true"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

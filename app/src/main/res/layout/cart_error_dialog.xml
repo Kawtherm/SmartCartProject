@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cart_error_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="@color/sl_teal"
+        android:textStyle="bold"
+        android:text="Error"
+        android:fontFamily="@font/droidkufi_bold"/>
+
+    <TextView
+        android:id="@+id/cart_error_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="@color/sl_teal"
+        android:text="Please check the cart items"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/droidkufi_regular"/>
+
+</LinearLayout>

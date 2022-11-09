@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentSelectionActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/right_top_bar_o"/>
+
+    <Button
+        android:id="@+id/pagesix_back_btn"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="46dp"
+        android:background="@color/sl_teal"
+        android:fontFamily="@font/droidkufi_bold"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/pagesix_comp_logo"
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/payment_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pagesix_comp_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/droidkufi_regular"
+            android:text="@string/txt_payment_methods"
+            android:textAlignment="center"
+            android:textColor="@color/sl_teal"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="118dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/sl_teal"
+            android:fontFamily="@font/droidkufi_bold"
+            android:text="@string/btn_done"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/payment_lbl" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/payment_lbl">
+
+            <ImageButton
+                android:id="@+id/pagesix_knet_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/knet"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/border"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"/>
+
+            <ImageButton
+                android:id="@+id/pagesix_visa_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/credit_card"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/border"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:src="@drawable/logo_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:src="@drawable/bottom_left_bar_b"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+
+
+
+</RelativeLayout>

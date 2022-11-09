@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "608491787960",
+    "project_id": "smartcart-840d0",
+    "storage_bucket": "smartcart-840d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608491787960:android:b112b8438f891a16a1064d",
+        "android_client_info": {
+          "package_name": "com.smartlife.smartcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608491787960-2l7vs5rqds6m8iokjgdn69clntfflnik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA_uYaowky6ShT75yU__cuazqm1OySYF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608491787960-2l7vs5rqds6m8iokjgdn69clntfflnik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

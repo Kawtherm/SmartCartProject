@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LanguageSelectionActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="586dp"
+        android:layout_height="86dp"
+        android:src="@drawable/left_top_bar_o" />
+
+    <!--TODO: uncomment for cart device
+    <ImageView
+        android:id="@+id/pagethree_bat_level"
+        android:layout_width="50dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/bat_20" />
+        -->
+
+    <RelativeLayout
+        android:layout_width="315dp"
+        android:layout_height="315dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/pagethree_comp_logo"
+            android:layout_width="225dp"
+            android:layout_height="225dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_help" />
+
+        <Button
+            android:id="@+id/english_btn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_rounded_corners"
+            android:fontFamily="@font/droidkufi_bold"
+            android:text="English"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/arabic_btn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_rounded_corners"
+            android:fontFamily="@font/droidkufi_bold"
+            android:text="العربية"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        style="@android:style/Widget.Material.ProgressBar.Large"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/pagethree_smartlife_logo"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_above="@id/tv_app_version"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/logo_bottom" />
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="8dp" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">SmartCart</string>
+
+    <string name="error_membership_num">This membership number is invalid</string>
+    <string name="error_membership_num_ar">رقم العضوية غير صحيح</string>
+    <string name="error_settings_save">Could not retrieve cart information</string>
+    <string name="successful_settings_save">Settings were saved successfully</string>
+    <string name="error_request_failed">Something went wrong!</string>
+    <string name="error_request_failed_ar">حدث خطأ!</string>
+    <string name="loading">Loading…</string>
+    <string name="loading_ar">جاري التحميل…</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_retry_ar">أعد المحاولة</string>
+    <string name="btn_cancel_order">Cancel Order</string>
+    <string name="btn_cancel_order_ar">إلغاء الطلب</string>
+    <string name="title_success">Success</string>
+    <string name="title_success_ar">نجاح</string>
+    <string name="txt_payment_methods">Payment Methods</string>
+    <string name="txt_payment_methods_ar">طرق الدفع</string>
+    <string name="txt_payment_cashier">Proceed to the cashier for payment</string>
+    <string name="txt_payment_cashier_ar">توجه الى الكاشير للدفع</string>
+    <string name="back_ar">رجوع</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="next_ar">متابعة</string>
+    <string name="txt_payment_qr">Scan this QR code to pay your bill</string>
+    <string name="txt_payment_qr_ar">صور الرمز لإتمام عملية الدفع</string>
+
+    <!-- CustomerInfoActivity -->
+    <string name="whatsapp">mobile number</string>
+    <string name="whatsapp_ar">رقم الموبايل</string>
+    <string name="membership_no">membership no</string>
+    <string name="membership_no_ar">رقم العضوية</string>
+    <string name="optional">(optional)</string>
+    <string name="optional_ar">(اختياري)</string>
+    <string name="is_your_name_is_correct">Does your name is correct!</string>
+    <string name="is_your_name_is_correct_ar">هل الاسم صحيح؟</string>
+    <string name="lbl_email">email address</string>
+    <string name="lbl_email_ar">البريد الالكتروني</string>
+
+    <!-- ShoppingActivity -->
+    <string name="header_item">Item</string>
+    <string name="header_item_ar">الصنف</string>
+    <string name="header_price">Price</string>
+    <string name="header_price_ar">السعر</string>
+    <string name="header_qty">Qty</string>
+    <string name="header_qty_ar">الكمية</string>
+    <string name="header_subtotal">Subtotal</string>
+    <string name="header_subtotal_ar">المجموع</string>
+    <string name="exit">Exit</string>
+    <string name="exit_ar">خروج</string>
+    <string name="barcode_input">Barcode Input</string>
+    <string name="barcode_input_ar">ادخل الباركود</string>
+    <string name="total">Total</string>
+    <string name="total_ar">المجموع</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="pay_now_ar">ادفع الآن</string>
+    <string name="error">Error</string>
+    <string name="error_ar">خطأ</string>
+    <string name="item_not_found">Item not found!</string>
+    <string name="item_not_found_ar">المنتج غير مسجل</string>
+
+    <!-- Page 8 -->
+    <string name="thank_you">Thank You</string>
+    <string name="thank_you_ar">شكراً</string>
+    <string name="for_shopping">for shopping with us</string>
+    <string name="for_shopping_ar">لتسوقك معنا</string>
+    <string name="rate">Rate Your Smart Shopping Experience</string>
+    <string name="rate_ar">شاركنا رأيك بتجربة التسوق الذكي</string>
+    <string name="scan_code">Scan this QR code with your phone camera to get the invoice</string>
+    <string name="scan_code_ar">للحصول على الفاتورة صور الرمز بكاميرة هاتفك</string>
+    <string name="invoice_no">Invoice no.</string>
+    <string name="invoice_no_ar">رقم الفاتورة</string>
+
+    <!-- ScaleActivity -->
+    <string name="saving">Saving…</string>
+
+    <!-- Settings Activity -->
+    <string name="system_settings">System Settings:</string>
+    <string name="coop_settings">Coop Settings:</string>
+    <string name="smartlife_api_url">SmartLife Api Url:</string>
+    <string name="inventory_api_url">Inventory Api Url:</string>
+    <string name="inventory_name">Inventory Name:</string>
+    <string name="eemc">EEMC</string>
+    <string name="integration">SmartLife Integration</string>
+    <string name="smartlife">SmartLife</string>
+    <string name="smartlife_ads_url">Ads Url:</string>
+    <string name="smartlife_cms_url">CMS Url:</string>
+    <string name="settings_cart_nb">Kiosk number</string>
+    <string name="settings_save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="mac_address">Mac Address</string>
+    <string name="admin_password">Admin Password</string>
+    <string name="print_msg_ar">امسح الباركود لمعرفة الفاتورة</string>
+
+    <!-- Alerts and Dialog strings -->
+    <string name="verify_membership">Verify membership</string>
+    <string name="verify_membership_ar">التأكد من رقم العضوية</string>
+
+    <!-- Exit Dialog -->
+    <string name="exit_quest">Exit?</string>
+    <string name="exit_quest_ar">خروج؟</string>
+    <string name="exit_yes">YES</string>
+    <string name="exit_yes_ar">نعم</string>
+    <string name="exit_no">NO</string>
+    <string name="exit_no_ar">لا</string>
+
+    <!-- Input Barcode Dialog -->
+    <string name="barcode_number">Enter barcode number</string>
+    <string name="barcode_number_ar">ادخل رقم الباركود</string>
+    <string name="submit">Submit</string>
+    <string name="submit_ar">ارسل</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+
+    <!-- Delete Item Dialog -->
+    <string name="delete_item_quest">Delete this item?</string>
+    <string name="delete_item_quest_ar">إلغاء هذا المنتج؟</string>
+
+
+    <!-- Notification Messages -->
+    <string name="n1">Scan the product first</string>
+    <string name="n1_ar">مرر السلعة على القارئ اولا</string>
+
+    <string name="msg_01">Put the Product in the basket</string>
+    <string name="msg_02">Scan the Product first</string>
+    <string name="msg_03">Check basket\'s contents</string>
+    <string name="msg_04">The Product does not match</string>
+    <string name="msg_05">Unidentified Product, ask for help</string>
+    <string name="msg_06">Membership ID is not valid</string>
+    <string name="msg_07">Low Battery: kindly finish the shopping within 60 minutes</string>
+
+    <string name="msg_01_ar">ضع المنتج في السلة</string>
+    <string name="msg_02_ar">امسح المنتج أولاً</string>
+    <string name="msg_03_ar">خطأ في محتويات السلة</string>
+    <string name="msg_04_ar">المنتج غير مطابق</string>
+    <string name="msg_05_ar">المنتج غير معرف، اطلب المساعدة</string>
+    <string name="msg_06_ar">رقم العضوية غير صحيح</string>
+    <string name="msg_07_ar">البطارية ضعيفة، لديك 60 دقيقة لإنهاء عملية التسوق</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_done_ar">تم</string>
+
+</resources>
